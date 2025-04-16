@@ -1,0 +1,122 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex; /* For better label-input alignment */
+    align-items: center;
+    gap: 10px; /* Space between label and input */
+}
+
+.input-group label {
+    flex-basis: 120px; /* Fixed width for labels */
+    text-align: right;
+    font-weight: bold;
+}
+
+.input-group input[type="number"] {
+    flex-grow: 1; /* Input takes remaining space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.status-message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 1.2em; /* Prevent layout shift when empty */
+}
+
+.status-error {
+    color: #e74c3c; /* Red for errors */
+}
+
+.status-success {
+    color: #2ecc71; /* Green for success */
+}
+
+
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto; /* Add scroll on small screens if table is too wide */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove gaps between cells */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+thead th {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for readability */
+}
+
+/* Basic responsiveness */
+@media (max-width: 480px) {
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .input-group label {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+    th, td {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.2rem; }
+}
