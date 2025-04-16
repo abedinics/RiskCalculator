@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk & Position Size Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Position Size Calculator</h1>
+
+        <div class="input-group">
+            <label for="capitalInput">Capital ($):</label>
+            <input type="number" id="capitalInput" step="any" placeholder="e.g., 1000">
+        </div>
+
+        <div class="input-group">
+            <label for="stopLossInput">Stop Loss (%):</label>
+            <input type="number" id="stopLossInput" step="any" placeholder="e.g., 2">
+        </div>
+
+        <div class="input-group">
+            <label for="leverageInput">Leverage (x):</label>
+            <input type="number" id="leverageInput" step="any" placeholder="e.g., 10">
+        </div>
+
+        <button id="calculateButton">Calculate</button>
+
+        <p id="statusMessage" class="status-message"></p>
+
+        <h2>Results:</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Risk %</th>
+                        <th>Risk Amt ($)</th>
+                        <th>Pos. Size ($)</th>
+                        <th>Leveraged ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0.5%</td>
+                        <td id="risk05">-</td>
+                        <td id="posSize05">-</td>
+                        <td id="levPosSize05">-</td>
+                    </tr>
+                    <tr>
+                        <td>1%</td>
+                        <td id="risk1">-</td>
+                        <td id="posSize1">-</td>
+                        <td id="levPosSize1">-</td>
+                    </tr>
+                    <tr>
+                        <td>2%</td>
+                        <td id="risk2">-</td>
+                        <td id="posSize2">-</td>
+                        <td id="levPosSize2">-</td>
+                    </tr>
+                    <tr>
+                        <td>3%</td>
+                        <td id="risk3">-</td>
+                        <td id="posSize3">-</td>
+                        <td id="levPosSize3">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
